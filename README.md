@@ -127,6 +127,11 @@ rspec spec
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
+👤 **Hana Sabih**
+
+- GitHub: [Github](https://github.com/HanaSabih)
+- Twitter: [Twister](https://twitter.com/HanaSabih)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/HanaSabih/)
 
 👤 **Adarsh Pathak**
 
