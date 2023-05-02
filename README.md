@@ -4,6 +4,7 @@
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
+  - [🧪 Linters](#🧪-linters)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
@@ -27,6 +28,9 @@
 Catalog is ruby based with terminal user interface project in which you can organize you things accroding to verious item object such as book, music, video etc
 
 **Catalog** is a totally OOP (Object Oriented Programming) with inheritance, polymorphism and private methods 
+
+## 🧪 linters 
+[![Tests](https://github.com/PowerLevel9000/Catalog/actions/workflows/test.yml/badge.svg)](https://github.com/PowerLevel9000/Catalog/actions/workflows/test.yml)
 
 ## 🛠 Built With <a name="built-with"></a>
 
