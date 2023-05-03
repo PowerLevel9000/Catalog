@@ -1,4 +1,4 @@
-require_relative "./data-controller/reader_writer"
+require_relative './data-controller/reader_writer'
 
 class Label
   attr_reader :id, :items

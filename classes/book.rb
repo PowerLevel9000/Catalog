@@ -1,20 +1,23 @@
 class Demo
-    def can_be_archived?
-        false
-    end
+  def can_be_archived?
+    false
+  end
 end
 
 class Book < Demo
-    attr_accessor :publisher
-    attr_reader :cover_state
-    def initialize(publisher, cover_state)
-        @publisher = publisher
-        @cover_state = cover_state
-    end
-    private  # just for testing  comment it out 
-    def can_be_archived?
-        super || cover_state == "bad" ? true : false
-    end
+  attr_accessor :publisher
+  attr_reader :cover_state
+
+  def initialize(publisher, cover_state)
+    @publisher = publisher
+    @cover_state = cover_state
+  end
+
+  private # just for testing  comment it out
+
+  def can_be_archived?
+    super || cover_state == 'bad' ? true : false
+  end
 end
 
 # book1 =  Book.new("CCC", "bad")
