@@ -33,7 +33,7 @@ class Label
   end
 end
 
-# #################################### caution open this at your own risk also for testing  ######################################
+# ################# caution open this at your own risk also for testing  #######################
 # label1 = Label.new("action", "red")
 # puts label1.to_json
 # label1.add_item("new item")
