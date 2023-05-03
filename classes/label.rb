@@ -35,6 +35,7 @@ end
 
 # #################################### caution open this at your own risk also for testing  ######################################
 # label1 = Label.new("action", "red")
+# puts label1.to_json
 # label1.add_item("new item")
 # label2 = Label.new("drama", "pink")
 # label2.add_item("new item")
@@ -44,4 +45,4 @@ end
 # label4.add_item("new item")
 
 # write_to_json_file([label1, label2, label3, label4], "./data/label.json")
-puts read_from_json_file("./data/label.json", Label)
+# puts read_from_json_file("./data/label.json", Label)
