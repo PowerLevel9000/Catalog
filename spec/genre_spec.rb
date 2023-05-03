@@ -1,5 +1,4 @@
-require_relative '../modules/genre'
-require_relative '../modules/item'
+require_relative 'spec_helper'
 
 describe Genre do
   before :each do

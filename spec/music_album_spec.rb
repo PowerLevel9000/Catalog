@@ -1,5 +1,4 @@
-require_relative '../modules/item'
-require_relative '../modules/music_album'
+
 require_relative 'spec_helper'
 
 describe MusicAlbum do
