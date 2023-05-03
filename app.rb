@@ -2,11 +2,14 @@ require_relative './classes/game'
 require_relative './classes/author'
 require_relative './list_data'
 require_relative './classes/item'
+require_relative './classes/storage/game_storage'
+require_relative './classes/storage/author_storage'
 
 class App
+
   def initialize
-    @games = []
-    @authors = []
+    @games = GameStorage.fetch
+    @authors = AuthorStorage.fetch
   end
 
   def welcome
@@ -69,6 +72,11 @@ class App
     @authors << author
 
     new_game.add_author(author)
+  end
+
+  def quit
+    GameStorage.store(@games)
+    AuthorStorage.store(@authors)
   end
 
   def run
