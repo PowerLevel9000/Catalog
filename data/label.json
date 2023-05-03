@@ -1,6 +1,6 @@
 [
-  "{\"id\":814,\"title\":\"action\",\"color\":\"red\",\"items\":[]}",
-  "{\"id\":856,\"title\":\"drama\",\"color\":\"pink\",\"items\":[]}",
-  "{\"id\":813,\"title\":\"genre\",\"color\":\"cyan\",\"items\":[]}",
-  "{\"id\":219,\"title\":\"romance\",\"color\":\"yellow\",\"items\":[]}"
+  "{\"id\":962,\"title\":\"action\",\"color\":\"red\",\"items\":[\"new item\"]}",
+  "{\"id\":74,\"title\":\"drama\",\"color\":\"pink\",\"items\":[\"new item\"]}",
+  "{\"id\":959,\"title\":\"genre\",\"color\":\"cyan\",\"items\":[\"new item\"]}",
+  "{\"id\":300,\"title\":\"romance\",\"color\":\"yellow\",\"items\":[\"new item\"]}"
 ]
