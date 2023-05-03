@@ -6,7 +6,6 @@ require_relative './classes/storage/game_storage'
 require_relative './classes/storage/author_storage'
 
 class App
-
   def initialize
     @games = GameStorage.fetch
     @authors = AuthorStorage.fetch

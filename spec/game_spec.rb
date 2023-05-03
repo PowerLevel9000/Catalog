@@ -16,7 +16,6 @@ describe Game do
   end
 
   it 'Checks whether game can be archived' do
-    item = Item.new('2010-01-01')
     game = Game.new('pokemon', 'y', '2023-04-26', '2010-01-24', 27)
     expect(game.archived).to be(false)
   end
