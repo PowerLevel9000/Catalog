@@ -19,17 +19,17 @@ class App
     @things = things
   end
 
-  def list_music_albums
-    count = 0
-    puts 'Avaible music albums are:'
-    @things.music_albums.each do |music_album|
-      puts "#{count})This music album is in " \
-           "#{music_album.genre.name} genre, and published " \
-           "at #{music_album.publish_date} which is " \
-           "#{music_album.on_spotify ? 'available' : 'not available'} on the Spotify."
-      count += 1
-    end
-  end
+  # def list_music_albums
+  #   count = 0
+  #   puts 'Avaible music albums are:'
+  #   @things.music_albums.each do |music_album|
+  #     puts "#{count})This music album is in " \
+  #          "#{music_album.genre.name} genre, and published " \
+  #          "at #{music_album.publish_date} which is " \
+  #          "#{music_album.on_spotify ? 'available' : 'not available'} on the Spotify."
+  #     count += 1
+  #   end
+  # end
 
   def create_music_album
     music_album = add_music_album
@@ -59,14 +59,14 @@ class App
     puts 'Book added successfully!'
   end
 
-  def list_books
-    puts 'Avaible books are:'
-    @counter = 1
-    @things.books.each do |book|
-      puts "#{@counter}) This book is #{book.label.title}, by #{book.author.first_name} #{book.author.last_name} and has #{book.cover_state} cover state."
-      @counter += 1
-    end
-  end
+  # def list_books
+  #   puts 'Avaible books are:'
+  #   @counter = 1
+  #   @things.books.each do |book|
+  #     puts "#{@counter}) This book is #{book.label.title}, by #{book.author.first_name} #{book.author.last_name} and has #{book.cover_state} cover state."
+  #     @counter += 1
+  #   end
+  # end
 
   def create_game
     puts 'to create game please enter the following information:'
@@ -87,41 +87,41 @@ class App
     puts 'Game added successfully!'
   end
 
-  def list_games
-    @counter = 1
-    puts 'Avaible games are:'
-    @things.games.each do |game|
-      puts "#{@counter}) This game is in #{game.name} genre and published at #{game.publish_date} and multiplayer mode  #{game.multiplayer} ."
-      @counter += 1
-    end
-  end
+  # def list_games
+  #   @counter = 1
+  #   puts 'Avaible games are:'
+  #   @things.games.each do |game|
+  #     puts "#{@counter}) This game is in #{game.name} genre and published at #{game.publish_date} and multiplayer mode  #{game.multiplayer} ."
+  #     @counter += 1
+  #   end
+  # end
 
-  def list_labels
-    puts 'Avaible labels are:'
-    count = 0
-    @things.labels.each do |label|
-      puts "#{count}) [Label] Tiltle:  #{label.title}, Color: #{label.color}"
-      count += 1
-    end
-  end
+  # def list_labels
+  #   puts 'Avaible labels are:'
+  #   count = 0
+  #   @things.labels.each do |label|
+  #     puts "#{count}) [Label] Tiltle:  #{label.title}, Color: #{label.color}"
+  #     count += 1
+  #   end
+  # end
 
-  def list_genres
-    @counter = 1
-    puts 'Avaible genres are:'
-    @things.genres.each do |genre|
-      puts "#{@counter}) [Genre] name: #{genre.name}"
-      @counter += 1
-    end
-  end
+  # def list_genres
+  #   @counter = 1
+  #   puts 'Avaible genres are:'
+  #   @things.genres.each do |genre|
+  #     puts "#{@counter}) [Genre] name: #{genre.name}"
+  #     @counter += 1
+  #   end
+  # end
 
-  def list_authors
-    puts 'Avaible Authors are:'
-    count = 0
-    @things.authors.each do |author|
-      puts "#{count}) [Author] First name:  #{author.first_name}, Last name: #{author.last_name}"
-      count += 1
-    end
-  end
+  # def list_authors
+  #   puts 'Avaible Authors are:'
+  #   count = 0
+  #   @things.authors.each do |author|
+  #     puts "#{count}) [Author] First name:  #{author.first_name}, Last name: #{author.last_name}"
+  #     count += 1
+  #   end
+  # end
 
   private
 
