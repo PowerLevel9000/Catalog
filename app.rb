@@ -47,13 +47,11 @@ class App
     puts 'to create book please enter the following information:'
     print "Enter book's published date(format: YYYY/MM/DD): "
     publish_date = Date.parse(gets.chomp)
-    print "Enter book's name: "
-    title = gets.chomp
     print "Enter book's publisher: "
     publisher = gets.chomp
     print "Enter book's cover state: "
     cover_state = gets.chomp
-    book = Book.new(publisher, cover_state)
+    book = Book.new(publisher, cover_state, publish_date)
     book.add_author(create_author)
     book.add_label(create_label)
     book.add_genre(create_genre)

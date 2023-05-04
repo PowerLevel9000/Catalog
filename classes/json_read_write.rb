@@ -45,7 +45,7 @@ module JsonReadWrite
           album.add_label(Label.new(music_album['title'], music_album['color']))
           music_albums << album
         end
-      end      
+      end
     end
 
     music_albums
@@ -54,13 +54,13 @@ module JsonReadWrite
   def read_genres(file_name)
     genres = []
     if File.exist?(file_name)
-          file_contents = File.read(file_name)
-    unless file_contents.empty?
-      temp = JSON.parse(file_contents)
-      temp.each do |genre|
-        genres << Genre.new(genre['name'])
+      file_contents = File.read(file_name)
+      unless file_contents.empty?
+        temp = JSON.parse(file_contents)
+        temp.each do |genre|
+          genres << Genre.new(genre['name'])
+        end
       end
-    end
     end
     genres
   end
@@ -68,25 +68,25 @@ module JsonReadWrite
   def read_books(file_name)
     books = []
     if File.exist?(file_name)
-       file_contents = File.read(file_name)
-    unless file_contents.empty?
-      temp = JSON.parse(file_contents)
-      temp.each do |book|
-        read_book = Book.new(book['publisher'], book['cover_state'])
-        read_book.add_author(Author.new(book['first_name'], book['last_name']))
-        read_book.add_label(Label.new(book['title'], book['color']))
-        books << read_book
+      file_contents = File.read(file_name)
+      unless file_contents.empty?
+        temp = JSON.parse(file_contents)
+        temp.each do |book|
+          read_book = Book.new(book['publisher'], book['cover_state'])
+          read_book.add_author(Author.new(book['first_name'], book['last_name']))
+          read_book.add_label(Label.new(book['title'], book['color']))
+          books << read_book
+        end
       end
     end
-    end
-   
+
     books
   end
 
   def read_authors(file_name)
     authors = []
     if File.exist?(file_name)
-          file_contents = File.read(file_name)
+      file_contents = File.read(file_name)
       unless file_contents.empty?
         temp = JSON.parse(file_contents)
         temp.each do |author|
@@ -102,31 +102,31 @@ module JsonReadWrite
     games = []
     if File.exist?(file_name)
       file_contents = File.read(file_name)
-    unless file_contents.empty?
-      temp = JSON.parse(file_contents)
-      temp.each do |game|
-        read_game = Game.new(game['name'], game['publish_date'], game['multiplayer'], game['last_played_at'])
-        read_game.add_genre(Genre.new(game['name']))
-        read_game.add_author(Author.new(game['first_name'], game['last_name']))
-        read_game.add_label(Label.new(game['title'], game['color']))
-        games << read_game
+      unless file_contents.empty?
+        temp = JSON.parse(file_contents)
+        temp.each do |game|
+          read_game = Game.new(game['name'], game['publish_date'], game['multiplayer'], game['last_played_at'])
+          read_game.add_genre(Genre.new(game['name']))
+          read_game.add_author(Author.new(game['first_name'], game['last_name']))
+          read_game.add_label(Label.new(game['title'], game['color']))
+          games << read_game
+        end
       end
     end
-    end
-    
+
     games
   end
 
   def read_labels(file_name)
     labels = []
     if File.exist?(file_name)
-          file_contents = File.read(file_name)
-    unless file_contents.empty?
-      temp = JSON.parse(file_contents)
-      temp.each do |label|
-        labels << Label.new(label['title'], label['color'])
+      file_contents = File.read(file_name)
+      unless file_contents.empty?
+        temp = JSON.parse(file_contents)
+        temp.each do |label|
+          labels << Label.new(label['title'], label['color'])
+        end
       end
-    end
     end
 
     labels
