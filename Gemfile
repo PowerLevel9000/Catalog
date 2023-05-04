@@ -9,4 +9,4 @@ gem 'json', '~> 2.6'
 
 gem 'rspec', '~> 3.12'
 
-gem 'terminal-table', '~> 3.02' 
+gem 'terminal-table', '~> 3.02'
