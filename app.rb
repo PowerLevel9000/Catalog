@@ -5,7 +5,6 @@
 # require_relative './classes/storage/game_storage'
 # require_relative './classes/storage/author_storage'
 
-
 require_relative './classes/author'
 require_relative './classes/book'
 require_relative './classes/game'
@@ -14,7 +13,6 @@ require_relative './classes/label'
 require_relative './classes/music_album'
 require_relative './classes/genre'
 require 'date'
-
 
 class App
   def initialize(things)
@@ -75,7 +73,7 @@ class App
   def create_game
     puts 'to create game please enter the following information:'
     print "Enter game's name: "
-    name= gets.chomp
+    name = gets.chomp
     print "Enter game's published date(format: YYYY/MM/DD): "
     published_date = Date.parse(gets.chomp)
     print 'Enter game multiplayer mode:[true/false] '
@@ -108,7 +106,6 @@ class App
       count += 1
     end
   end
-
 
   def list_genres
     @counter = 1
@@ -145,7 +142,6 @@ class App
     @things.add_genre(genre)
     genre
   end
-
 
   def create_author
     print 'Enter author first name: '

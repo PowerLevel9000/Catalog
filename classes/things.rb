@@ -1,6 +1,5 @@
 require_relative 'json_read_write'
 
-
 class Things
   include JsonReadWrite
   attr_reader :music_albums, :genres, :books, :labels, :authors, :games
@@ -25,7 +24,7 @@ class Things
         title: music_album.label.title,
         color: music_album.label.color,
         first_name: music_album.author.first_name,
-        last_name: music_album.author.last_name,
+        last_name: music_album.author.last_name
       }
     json_write('./data/music_album.json', json_music_album)
   end
@@ -62,7 +61,6 @@ class Things
     json_write('./data/authors.json', json_author)
   end
 
-
   def add_book(book)
     @books << book unless @books.include?(book)
     json_book =
@@ -74,7 +72,7 @@ class Things
         name: book.genre.name,
         title: book.label.title,
         first_name: book.author.first_name,
-        last_name: book.author.last_name,
+        last_name: book.author.last_name
       }
     json_write('./data/book.json', json_book)
   end
@@ -91,7 +89,7 @@ class Things
         title: game.label.title,
         color: game.label.color,
         first_name: game.author.first_name,
-        last_name: game.author.last_name,
+        last_name: game.author.last_name
       }
     json_write('./data/games.json', json_game)
   end
