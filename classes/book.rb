@@ -1,27 +1,17 @@
-class Demo
-  def can_be_archived?
-    false
-  end
-end
+require_relative 'item'
 
-class Book < Demo
-  attr_accessor :publisher
-  attr_reader :cover_state
+class Book < Item
+  attr_accessor :publisher, :cover_state
 
-  def initialize(publisher, cover_state)
-    super()
+  def initialize(publisher, cover_state, publish_date)
+    super(publish_date)
     @publisher = publisher
     @cover_state = cover_state
   end
 
-  private # just for testing  comment it out
+  private
 
   def can_be_archived?
     super || cover_state == 'bad' ? true : false
   end
 end
-
-# book1 =  Book.new("CCC", "bad")
-# puts book1.can_be_archived?
-# book2 =  Book.new("CCC", "good")
-# puts book2.can_be_archived?

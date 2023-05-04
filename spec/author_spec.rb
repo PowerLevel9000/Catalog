@@ -15,7 +15,7 @@ describe Author do
   context 'It can properly add items' do
     it 'Can add game' do
       author = Author.new('Leslie', 'Studios', 12)
-      author.add_item(Game.new('pokemon', 'y', '2023-04-26', '2010-01-24', 27))
+      author.add_item(Game.new('pokemon', 'y', '2023-04-26', '2010-01-24'))
       expect(author.items.first).to be_a Game
     end
   end

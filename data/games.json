@@ -1,23 +1,13 @@
 [
   {
-    "name": "play",
-    "multiplayer": "n",
-    "last_played_at": "2023-01-01",
-    "publish_date": "2013-06-14",
-    "id": 729
-  },
-  {
-    "name": "pokemon2",
-    "multiplayer": "n",
-    "last_played_at": "2023-09-23",
-    "publish_date": "2023-08-09",
-    "id": 15
-  },
-  {
-    "name": "candy crush",
-    "multiplayer": "y",
-    "last_played_at": "2023-04-16",
-    "publish_date": "2023-01-01",
-    "id": 65
+    "id": 426,
+    "publish_date": "2023-01-28",
+    "multiplayer": "2020-09-09",
+    "last_played_at": true,
+    "name": "Action",
+    "title": "Action ",
+    "color": "Red",
+    "first_name": "Manga",
+    "last_name": "Pathak"
   }
 ]

@@ -1,6 +1,27 @@
 [
-  "{\"id\":962,\"title\":\"action\",\"color\":\"red\",\"items\":[\"new item\"]}",
-  "{\"id\":74,\"title\":\"drama\",\"color\":\"pink\",\"items\":[\"new item\"]}",
-  "{\"id\":959,\"title\":\"genre\",\"color\":\"cyan\",\"items\":[\"new item\"]}",
-  "{\"id\":300,\"title\":\"romance\",\"color\":\"yellow\",\"items\":[\"new item\"]}"
+  {
+    "title": "Action",
+    "id": 322,
+    "color": "red"
+  },
+  {
+    "title": "gamer",
+    "id": 939,
+    "color": "neon"
+  },
+  {
+    "title": "Action",
+    "id": 440,
+    "color": "Red"
+  },
+  {
+    "title": "Action ",
+    "id": 759,
+    "color": "Red"
+  },
+  {
+    "title": "author",
+    "id": 709,
+    "color": "red"
+  }
 ]

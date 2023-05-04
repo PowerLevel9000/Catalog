@@ -1,13 +1,22 @@
 [
-    {
-      "on_spotify": true,
-      "name": "classic",
-      "publish_date": "2020-01-01",
-      "id": 874,
-      "title": "bad",
-      "color": "orange",
-      "first_name": "zewd",
-      "last_name": "erkyhun",
-      "source": "friend"
-    }
-  ]
+  {
+    "on_spotify": true,
+    "name": "mystic",
+    "publish_date": "2022-12-28",
+    "id": 791,
+    "title": "Action",
+    "color": "red",
+    "first_name": "Alan ",
+    "last_name": "Walker"
+  },
+  {
+    "on_spotify": true,
+    "name": "hip pop",
+    "publish_date": null,
+    "id": 276,
+    "title": "gamer",
+    "color": "neon",
+    "first_name": "Alan",
+    "last_name": "Walker"
+  }
+]
