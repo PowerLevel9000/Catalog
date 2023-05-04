@@ -87,14 +87,13 @@ module JsonReadWrite
     authors
   end
 
-
   def read_games(file_name)
     games = []
     file_contents = File.read(file_name)
     unless file_contents.empty?
       temp = JSON.parse(file_contents)
       temp.each do |game|
-        read_game = Game.new(game['name'],game['publish_date'], game['multiplayer'], game['last_played_at'])
+        read_game = Game.new(game['name'], game['publish_date'], game['multiplayer'], game['last_played_at'])
         read_game.add_genre(Genre.new(game['name']))
         read_game.add_author(Author.new(game['first_name'], game['last_name']))
         read_game.add_label(Label.new(game['title'], game['color']))
