@@ -20,9 +20,8 @@ class App
   end
 
   def list_music_albums
-    if @things.music_albums.length == 0
-      return empty
-    end
+    return empty if @things.music_albums.empty?
+
     count = 0
     puts 'Avaible music albums are:'
     @things.music_albums.each do |music_album|
@@ -35,7 +34,7 @@ class App
   end
 
   def empty
-    puts "Nothing at the moment"
+    puts 'Nothing at the moment'
   end
 
   def create_music_album
@@ -53,7 +52,12 @@ class App
   def create_book
     puts 'to create book please enter the following information:'
     print "Enter book's published date(format: YYYY/MM/DD): "
-    publish_date = Date.parse(gets.chomp)
+    begin
+      publish_date = Date.parse(gets.chomp)
+    rescue StandardError
+      puts 'invalid input try again'
+      create_book
+    end
     print "Enter book's publisher: "
     publisher = gets.chomp
     print "Enter book's cover state: "
@@ -67,9 +71,8 @@ class App
   end
 
   def list_books
-    if @things.books.length == 0
-      return empty
-    end
+    return empty if @things.books.empty?
+
     puts 'Avaible books are:'
     @counter = 1
     @things.books.each do |book|
@@ -83,7 +86,13 @@ class App
     print "Enter game's name: "
     name = gets.chomp
     print "Enter game's published date(format: YYYY/MM/DD): "
-    published_date = Date.parse(gets.chomp)
+    begin
+      published_date = Date.parse(gets.chomp)
+    rescue StandardError
+      puts 'invalid input try again'
+      create_game
+    end
+
     print 'Enter game multiplayer mode:[true/false] '
     multiplayer = gets.chomp.to_s
     multiplayer = multiplayer == 'true'
@@ -98,9 +107,8 @@ class App
   end
 
   def list_games
-    if @things.games.length == 0
-      return empty
-    end
+    return empty if @things.games.empty?
+
     @counter = 1
     puts 'Avaible games are:'
     @things.games.each do |game|
@@ -110,9 +118,8 @@ class App
   end
 
   def list_labels
-    if @things.labels.length == 0
-      return empty
-    end
+    return empty if @things.labels.empty?
+
     puts 'Avaible labels are:'
     count = 0
     @things.labels.each do |label|
@@ -122,9 +129,8 @@ class App
   end
 
   def list_genres
-    if @things.genres.length == 0
-      return empty
-    end
+    return empty if @things.genres.empty?
+
     @counter = 1
     puts 'Avaible genres are:'
     @things.genres.each do |genre|
@@ -134,9 +140,8 @@ class App
   end
 
   def list_authors
-    if @things.authors.length == 0
-      return empty
-    end
+    return empty if @things.authors.empty?
+
     puts 'Avaible Authors are:'
     count = 0
     @things.authors.each do |author|
@@ -151,7 +156,12 @@ class App
     print 'Does music album avaible on the spotify? [Y/N]: '
     on_spotify = gets.chomp.downcase == 'y'
     puts "Enter music album's published date(format: YYYY/MM/DD): "
-    published_date = Date.parse(gets.chomp)
+    begin
+      published_date = Date.parse(gets.chomp)
+    rescue StandardError
+      puts 'invaild input try again'
+      add_music_album
+    end
     MusicAlbum.new(on_spotify, published_date)
   end
 

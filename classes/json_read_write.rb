@@ -72,7 +72,7 @@ module JsonReadWrite
       unless file_contents.empty?
         temp = JSON.parse(file_contents)
         temp.each do |book|
-          read_book = Book.new(book['publisher'], book['cover_state'])
+          read_book = Book.new(book['publisher'], book['cover_state'], book['publish_date'])
           read_book.add_author(Author.new(book['first_name'], book['last_name']))
           read_book.add_label(Label.new(book['title'], book['color']))
           books << read_book
