@@ -5,7 +5,7 @@
 
 require_relative 'app'
 require_relative './classes/things'
-require_relative './menu'
+require_relative 'menu'
 
 def main
   things = Things.new

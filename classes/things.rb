@@ -1,4 +1,6 @@
 require_relative 'json_read_write'
+
+
 class Things
   include JsonReadWrite
   attr_reader :music_albums, :genres, :books, :labels, :authors, :games
@@ -8,8 +10,8 @@ class Things
     @books = json_read('./data/book.json') || []
     @labels = json_read('./data/label.json') || []
     @genres = json_read('./data/genre.json') || []
-    @authors = json_read('./data/author.json') || []
-    @games = json_read('./data/game.json') || []
+    @authors = json_read('./data/authors.json') || []
+    @games = json_read('./data/games.json') || []
   end
 
   def add_music_album(music_album)
@@ -24,9 +26,8 @@ class Things
         color: music_album.label.color,
         first_name: music_album.author.first_name,
         last_name: music_album.author.last_name,
-        source: music_album.source.name
       }
-    json_write('./localstorage/music_album.json', json_music_album)
+    json_write('./data/music_album.json', json_music_album)
   end
 
   def add_genre(genre)
@@ -36,7 +37,7 @@ class Things
         name: genre.name,
         id: genre.id
       }
-    json_write('./localstorage/genre.json', json_genre)
+    json_write('./data/genre.json', json_genre)
   end
 
   def add_label(label)
@@ -47,7 +48,7 @@ class Things
         id: label.id,
         color: label.color
       }
-    json_write('./localstorage/label.json', json_label)
+    json_write('./data/label.json', json_label)
   end
 
   def add_author(author)
@@ -58,7 +59,7 @@ class Things
         last_name: author.last_name,
         id: author.id
       }
-    json_write('./localstorage/author.json', json_author)
+    json_write('./data/authors.json', json_author)
   end
 
 
@@ -72,12 +73,10 @@ class Things
         publisher: book.publisher,
         name: book.genre.name,
         title: book.label.title,
-        color: book.label.color,
         first_name: book.author.first_name,
         last_name: book.author.last_name,
-        source: book.source.name
       }
-    json_write('./localstorage/book.json', json_book)
+    json_write('./data/book.json', json_book)
   end
 
   def add_game(game)
@@ -93,8 +92,7 @@ class Things
         color: game.label.color,
         first_name: game.author.first_name,
         last_name: game.author.last_name,
-        source: game.source.name
       }
-    json_write('./localstorage/game.json', json_game)
+    json_write('./data/games.json', json_game)
   end
 end

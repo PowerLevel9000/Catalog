@@ -1,15 +1,12 @@
-class Demo
-  def can_be_archived?
-    false
-  end
-end
+require_relative 'item'
 
-class Book < Demo
-  attr_accessor :publisher
+class Book < Item
+  attr_accessor :publisher, :id
   attr_reader :cover_state
 
   def initialize(publisher, cover_state)
-    super()
+    super(publish_date)
+    @id = Random.rand(1..1000)
     @publisher = publisher
     @cover_state = cover_state
   end

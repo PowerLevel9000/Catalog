@@ -37,10 +37,8 @@ class App
     music_album = add_music_album
     genre = create_genre
     label = create_label
-    source = create_source
     author = create_author
     music_album.add_genre(genre)
-    music_album.add_source(source)
     music_album.add_author(author)
     music_album.add_label(label)
     @things.add_music_album(music_album)
@@ -50,15 +48,16 @@ class App
   def create_book
     puts 'to create book please enter the following information:'
     print "Enter book's published date(format: YYYY/MM/DD): "
-    published_date = Date.parse(gets.chomp)
+    publish_date = Date.parse(gets.chomp)
+    print "Enter book's name: "
+    title = gets.chomp
     print "Enter book's publisher: "
     publisher = gets.chomp
     print "Enter book's cover state: "
     cover_state = gets.chomp
-    book = Book.new(published_date, publisher, cover_state)
+    book = Book.new(publisher, cover_state)
     book.add_author(create_author)
     book.add_label(create_label)
-    book.add_source(create_source)
     book.add_genre(create_genre)
     @things.add_book(book)
     puts 'Book added successfully!'
@@ -75,6 +74,8 @@ class App
 
   def create_game
     puts 'to create game please enter the following information:'
+    print "Enter game's name: "
+    name= gets.chomp
     print "Enter game's published date(format: YYYY/MM/DD): "
     published_date = Date.parse(gets.chomp)
     print 'Enter game multiplayer mode:[true/false] '
@@ -82,10 +83,9 @@ class App
     multiplayer = multiplayer == 'true'
     print "Enter game's last played date(format: YYYY/MM/DD): "
     last_played_at = Date.parse(gets.chomp)
-    game = Game.new(published_date, multiplayer, last_played_at)
+    game = Game.new(name, published_date, multiplayer, last_played_at)
     game.add_author(create_author)
     game.add_label(create_label)
-    game.add_source(create_source)
     game.add_genre(create_genre)
     @things.add_game(game)
     puts 'Game added successfully!'
@@ -95,7 +95,7 @@ class App
     @counter = 1
     puts 'Avaible games are:'
     @things.games.each do |game|
-      puts "#{@counter}) This game is in #{game.genre.name} genre and published at #{game.publish_date} and multiplayer mode  #{game.multiplayer} ."
+      puts "#{@counter}) This game is in #{game.name} genre and published at #{game.publish_date} and multiplayer mode  #{game.multiplayer} ."
       @counter += 1
     end
   end

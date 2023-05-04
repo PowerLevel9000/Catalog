@@ -19,11 +19,11 @@ module JsonReadWrite
       read_music_albums(file_name)
     when './data/movie.json'
       read_movies(file_name)
-    when './data/game.json'
+    when './data/games.json'
       read_games(file_name)
     when './data/label.json'
       read_labels(file_name)
-    when './data/author.json'
+    when './data/authors.json'
       read_authors(file_name)
     else
       []
@@ -40,7 +40,6 @@ module JsonReadWrite
       temp.each do |music_album|
         album = MusicAlbum.new(music_album['on_spotify'], music_album['publish_date'])
         album.add_genre(Genre.new(music_album['name']))
-        album.add_source(Source.new(music_album['source']))
         album.add_author(Author.new(music_album['first_name'], music_album['last_name']))
         album.add_label(Label.new(music_album['title'], music_album['color']))
         music_albums << album
@@ -55,7 +54,7 @@ module JsonReadWrite
     unless file_contents.empty?
       temp = JSON.parse(file_contents)
       temp.each do |genre|
-        genres << Genre.new(genre['name'], genre['id'])
+        genres << Genre.new(genre['name'])
       end
     end
     genres
@@ -67,9 +66,7 @@ module JsonReadWrite
     unless file_contents.empty?
       temp = JSON.parse(file_contents)
       temp.each do |book|
-        read_book = Book.new(book['publish_date'], book['publisher'], book['cover_state'])
-        read_book.add_genre(Genre.new(book['name']))
-        read_book.add_source(Source.new(book['source']))
+        read_book = Book.new(book['publisher'], book['cover_state'])
         read_book.add_author(Author.new(book['first_name'], book['last_name']))
         read_book.add_label(Label.new(book['title'], book['color']))
         books << read_book
@@ -97,9 +94,8 @@ module JsonReadWrite
     unless file_contents.empty?
       temp = JSON.parse(file_contents)
       temp.each do |game|
-        read_game = Game.new(game['publish_date'], game['multiplayer'], game['last_played_at'])
+        read_game = Game.new(game['name'],game['publish_date'], game['multiplayer'], game['last_played_at'])
         read_game.add_genre(Genre.new(game['name']))
-        read_game.add_source(Source.new(game['source']))
         read_game.add_author(Author.new(game['first_name'], game['last_name']))
         read_game.add_label(Label.new(game['title'], game['color']))
         games << read_game
@@ -114,7 +110,7 @@ module JsonReadWrite
     unless file_contents.empty?
       temp = JSON.parse(file_contents)
       temp.each do |label|
-        labels << Label.new(label['title'], label['color'], label['id'])
+        labels << Label.new(label['title'], label['color'])
       end
     end
     labels

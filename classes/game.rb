@@ -3,9 +3,9 @@ require_relative 'item'
 class Game < Item
   attr_accessor :name, :multiplayer, :last_played_at, :publish_date, :id
 
-  def initialize(name, multiplayer, last_played_at, publish_date, id = Random.rand(1..1000))
+  def initialize(name, multiplayer, last_played_at, publish_date)
     super(publish_date)
-    @id = id
+    @id = Random.rand(1..1000)
     @name = name
     @multiplayer = multiplayer
     @last_played_at = last_played_at
