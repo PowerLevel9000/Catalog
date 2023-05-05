@@ -25,7 +25,7 @@
 
 # 📖 Catalog <a name="about-project"></a>
 
-Catalog is ruby based with terminal user interface project in which you can organize you things according to various item object such as book, music, video etc
+Catalog is ruby based with terminal user interface project in which you can organize your things according to various item object such as book, music, video etc
 
 **Catalog** is a totally OOP (Object Oriented Programming) with inheritance, polymorphism and private methods 
 
