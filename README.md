@@ -147,6 +147,12 @@ rspec spec
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+## Video explaining our project
+
+ [Link to video](https://drive.google.com/file/d/12tyxsknpwuFCCLCK25BuhuwtyRrmqMKE/view?usp=sharing)
+
+ 
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
